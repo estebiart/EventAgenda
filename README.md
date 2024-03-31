@@ -1,4 +1,4 @@
-# philips-events-app
+# EventAgenda App
 
 ## Framework7 CLI Options
 
