@@ -1,31 +1,5 @@
 # EventAgenda App
 
-## Framework7 CLI Options
-
-Framework7 app created with following options:
-
-```
-{
-  "cwd": "/Users/omarbarreto/Documents/front-projects/apps/philips-pwa",
-  "type": [
-    "pwa",
-    "web"
-  ],
-  "name": "philips-events-app",
-  "framework": "react",
-  "template": "tabs",
-  "cssPreProcessor": "scss",
-  "bundler": "vite",
-  "theming": {
-    "customColor": false,
-    "color": "#007aff",
-    "darkMode": false,
-    "iconFonts": true
-  },
-  "customBuild": false
-}
-```
-
 ## Install Dependencies
 
 First of all we need to install dependencies, run in terminal
