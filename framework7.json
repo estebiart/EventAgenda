@@ -1,0 +1,19 @@
+{
+  "cwd": "/Users/omarbarreto/Documents/front-projects/apps/philips-pwa",
+  "type": [
+    "pwa",
+    "web"
+  ],
+  "name": "philips-events-app",
+  "framework": "react",
+  "template": "tabs",
+  "cssPreProcessor": "scss",
+  "bundler": "vite",
+  "theming": {
+    "customColor": false,
+    "color": "#1976d2",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}
