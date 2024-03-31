@@ -1,0 +1,125 @@
+
+.toolbar-bottom {
+  border: 1px solid rgba(255, 255, 255, 0.00);
+  background: linear-gradient(180deg, rgba(110, 173, 243, 0.10) 0%, rgba(0, 44, 119, 0.10) 53.48%, rgba(28, 23, 55, 0.10) 100%);
+  backdrop-filter: blur(25px);
+  background-color: transparent !important;
+    width: 341px;
+    height:54px;
+    padding: 4px;
+    border-radius: 100px;
+    @include mq(desktop){
+      background:
+      linear-gradient(180deg, rgba(110, 172, 243, 0.05) 0%, rgba(0, 44, 119, 0.1) 1.48%, rgba(28, 23, 55, 0.1) 1%),
+      linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.21) 200%, #ffffff13 300%);    
+      border: 1.5px solid rgba(209, 213, 219, 0.3);
+        height:38px;
+        width: 100%;
+    }
+}
+.menu{
+    position: fixed;
+    z-index: 5001;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    bottom: 24px;
+    animation-name: header-show;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    @include mq(desktop){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        top: 0;
+        bottom: auto;
+        height: 101px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        background: #ffffff08;
+        backdrop-filter: blur(7.5px);
+    }
+    span{   color: var(--base-white);}
+    &__image{
+      max-width: 125px ;
+      margin-left: 119px;
+      img{
+        width: 100%;
+      }
+    }
+    &-animated{
+      animation-name: header-hide;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    &__button{
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 119px;
+    }
+    &__toolbar{
+      display: flex;
+      justify-content: center;
+    }
+    .tab-link .tabbar-label {
+      @include bodymobile();
+    }
+    .toolbar-inner .tab-link {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      @include mq(desktop){
+      display: flex !important;
+      align-items: center !important;
+      flex-direction: row !important;
+      gap:4px}
+    }
+    .toolbar-inner {
+     height: 100%;
+     bottom: 0;
+    }
+}
+.tabbar-label.active-tab {
+    color: var(--yellow-500);
+  }
+  .tab-link img{
+    padding: 5px 0px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .tab-link.tab-link-active img{
+    padding: 0px 0px;
+  }
+
+  @keyframes header-hide{
+     from { opacity: 1;
+      transform: translateY(0);
+     }
+     to { opacity: 0;
+      transform: translateY(-50%); }
+   }
+   @keyframes header-show{
+    from { 
+      opacity: 0;
+     transform: translateY(-50%); 
+    }
+    to { 
+     opacity: 1;
+     transform: translateY(0);}
+  }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #00111F;
+  opacity: 0.02;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:var(--base-white);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.022);
+}

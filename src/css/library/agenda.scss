@@ -1,0 +1,321 @@
+.subnavbar {
+    position: static;
+    background-color: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: none !important;
+    height: auto !important;
+    padding-bottom: 16px;
+
+    @include mq(desktop) {
+        display: none;
+    }
+
+    input {
+        background-color: #ffffff33 !important;
+        height: 32px !important;
+    }
+
+    input::placeholder {
+        color: #f1f9fe66 !important;
+    }
+
+    .searchbar-icon{
+        height: 32px;
+        &:after {
+            color: var(--base-white);
+            font-size: 16px;
+        }
+    }
+}
+
+:not(.PopupHome) .navbar{
+    margin-top: 16px;
+    min-height: 92px;
+    &-inner{
+        height: auto;
+        min-height: 92px;
+        hr{
+            display: none;
+        }
+    }
+}
+.PopupHome .navbar{
+    margin-top: 29px;
+    min-height: unset;
+}
+
+.navbars {
+    // margin-top: 50px;
+}
+
+.navbar-bg {
+    visibility: hidden;
+    display: none;
+}
+
+.searchbar-disable-button {
+    display: none !important;
+}
+
+.searchbar input[type="search"] {
+    color: var(--base-white);
+}
+
+.agenda {
+    padding: 124px 0 140px;
+    height: 100.4vh;
+    position: relative;
+    &__toolbar {
+        position: static;
+        // height: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .list {
+        padding: 16px;
+        margin: 0 !important;
+        padding-top: 9px;
+        width: 100%;
+        max-width: 1200px;
+
+        @include mq(desktop) {
+            margin-bottom: 60px;
+        }
+
+        li.accordion-item ul {
+            border-radius: 0 !important;
+        }
+    }
+
+    .tabs {
+        width: 100%;
+
+        @include mq(desktop) {
+            // padding-top: 94px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tab-active {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            overflow: hidden scroll;
+            max-height: calc(100vh - 264px);
+        }
+    }
+
+    .accordion-item-content {
+        .item-inner:after {
+            display: none !important;
+        }
+
+        ul {
+            @include mq(desktop) {
+                margin-top: 12px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 8px;
+                border-radius: 0px !important;
+            }
+        }
+
+        .list {
+            padding: 0;
+        }
+
+        li {
+            backdrop-filter: blur(50px);
+            background: #ffffff33;
+        }
+    }
+
+    .toolbar {
+        position: static;
+        height: 34px;
+        background-color: transparent;
+        border-bottom: 1px solid #de7c00;
+        backdrop-filter: none;
+        max-width: 1200px;
+
+        @include mq(desktop) {
+            margin-top: 40px;
+        }
+
+        &-inner {
+            padding: 0 16px;
+            @include mq(desktop) {
+                max-width: 343px;
+                padding: 0;
+            }
+
+            span {
+                display: none !important;
+            }
+        }
+    }
+
+    .tab-link {
+        @include body();
+        color: var(--base-white);
+        background: #ffffff1a;
+        max-width: 49%;
+        border-radius: 4px 4px 0px 0px;
+        font-weight: 600;
+    }
+
+    .tab-link-active {
+        border-radius: 4px 4px 0px 0px;
+        border: 1px solid var(--Gradients-Yellow, #fdd37a);
+        background: linear-gradient(180deg,
+                rgba(253, 211, 122, 0.3) 0%,
+                rgba(222, 124, 0, 0.3) 100%);
+        box-shadow: 0px 0px 2px 0px #f1f9fe inset;
+        backdrop-filter: blur(7.5px);
+        border-image-slice: 1;
+        border-bottom: none;
+    }
+
+    .item {
+        margin: 2px;
+
+        .item-icon {
+            background-image: url("../../public/images/agenda/clock-special.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 14px;
+            height: 14px;
+        }
+
+        &-special {
+            background: #ffffff1a !important;
+
+            .item-time {
+                color: var(--base-white);
+            }
+
+            .item-icon {
+                background-image: url("../../public/images/agenda/clock.svg");
+            }
+        }
+
+        &-imageContainer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 9px;
+        }
+
+        &-image {
+            max-width: 40px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-title {
+            @include body();
+            font-weight: 600;
+            max-width: 311px;
+            color: var(--base-white);
+            white-space: normal;
+            text-align: left;
+        }
+
+        &-time {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            @include caption();
+            color: var(--blue-400);
+        }
+
+        &-chips {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &-chip {
+            .chip-label {
+                @include caption();
+            }
+        }
+
+        .chip-media+.chip-label {
+            margin-left: 8px;
+        }
+
+        .chip {
+            color: var(--base-white);
+            background-color: transparent;
+        }
+
+        &-link {
+            border-radius: 8px !important;
+            border: 1px solid var(--Gradients-Mint-Green, #7EDDDE);
+            background: linear-gradient(180deg, rgba(52, 165, 157, 0.30) 0%, rgba(113, 211, 211, 0.30) 100%);
+            box-shadow: 0px 0px 2px 0px #F1F9FE inset;
+            backdrop-filter: blur(7.5px);
+        }
+    }
+
+    .accordion-item-opened .item-link {
+        border: 1px solid var(--Gradients-Mint-Green, #7EDDDE);
+        background: var(--Gradients-Mint-Green, linear-gradient(180deg, #7EDDDE 0%, #269A91 100%));
+        box-shadow: 0px -2px 6px 0px #EBD8FF inset, 0px 0px 0px 4px rgba(166, 114, 218, 0.20);
+        border-radius: 8px 8px 0px 0px !important;
+    }
+
+    .item-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 16px 0px;
+    }
+
+    .item-link .item-inner {
+        height: 56px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .item-inner:before {
+        color: var(--base-white) !important;
+    }
+
+    ul {
+        background-color: transparent;
+        gap: 16px;
+
+        li {
+            margin: 8px 0px;
+        }
+    }
+}
+
+.searchbar input[type="search"] {
+    font-size: 14px !important;
+}
+
+.searchbar{
+    height: 32px;
+    &-inner{
+        height: auto;
+    }
+    &-input-wrap{
+        height: auto;
+    }
+    .input-clear-button{
+        color: #FFF;
+        &:after {
+            line-height: 32px !important;
+            font-size: 16px;
+        }
+    }
+}

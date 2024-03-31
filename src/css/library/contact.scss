@@ -1,0 +1,51 @@
+.contact{
+    height: auto;
+    justify-content: center;
+    padding-bottom: 90px;
+    &__button{
+        @include body();
+    }
+    &__container{
+        background: radial-gradient(118.85% 90.95% at 50% 50%, rgba(0, 0, 0, 0) 52.41%, #8345BA 69.27%, rgba(255, 255, 255, 0) 100%);
+        @include mq(desktop){
+            background: radial-gradient(118.85% 100.95% at 50% 50%, rgba(0, 0, 0, 0) 45.41%, #8345ba 69.27%, rgba(255, 255, 255, 0) 100%);}
+    border-radius: 30px;
+    width: 80%;
+    max-width: 1200px;
+    max-height: 392px;
+    @include mq(desktop){ 
+        max-height: 100%
+    }
+    }
+    &__title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+          width: 100%;
+          height: 100%;
+          @include mq(desktop){
+            width: 574px !important;}
+        }
+    }
+    &__icon{
+        margin-top: 64px;
+        margin-bottom: 24px;
+        img{
+            width: 72px;
+            height: 72px;
+        }
+    }
+    &__description{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 128px;
+        p{
+            padding: 0 14px;
+            width: 574px;
+            @include body2();
+        }
+
+    }
+}
