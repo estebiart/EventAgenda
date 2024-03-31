@@ -1,10 +1,9 @@
 {
-  "cwd": "/Users/omarbarreto/Documents/front-projects/apps/philips-pwa",
   "type": [
     "pwa",
     "web"
   ],
-  "name": "philips-events-app",
+  "name": "events-app",
   "framework": "react",
   "template": "tabs",
   "cssPreProcessor": "scss",

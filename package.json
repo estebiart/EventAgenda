@@ -1,8 +1,8 @@
 {
-  "name": "philips-events-app",
+  "name": "events-app",
   "private": true,
   "version": "1.0.0",
-  "description": "philips-events-app",
+  "description": "events-app",
   "repository": "",
   "license": "UNLICENSED",
   "scripts": {
